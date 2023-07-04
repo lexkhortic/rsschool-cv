@@ -1,4 +1,4 @@
-<img src="img/my-photo-circle.png" width="250"/>
+<img src="assets/img/my-photo-circle.png" width="250"/>
 
 # KHORT ALIAKSEI <br> Junior Java Developer
 
@@ -16,7 +16,7 @@ I am honing the stack of technologies that I own, in the near future I plan to d
 khort97@mail.ru
 
 ### Social networks & messengers:
-[<img src="img/telegram-logo.png" width="35"/>](https://t.me/lexkhortic) [<img src="img/linkedIn_color.svg" width="35"/>](https://linkedin.com/in/lexkhortic)  [<img src="img/github-color.svg" width="35"/>](https://github.com/lexkhortic)  [<img src="img/instagram-color.png" width="35"/>](https://instagram.com/lex_khortic97)
+[<img src="assets/img/telegram-logo.png" width="35"/>](https://t.me/lexkhortic) [<img src="assets/img/linkedIn_color.svg" width="35"/>](https://linkedin.com/in/lexkhortic)  [<img src="assets/img/github-color.svg" width="35"/>](https://github.com/lexkhortic)  [<img src="assets/img/instagram-color.png" width="35"/>](https://instagram.com/lex_khortic97)
 
 ### Discord-server nickname:
 Aliaksei Khort (@lexkhortic)
