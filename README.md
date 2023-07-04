@@ -1,1 +1,1 @@
-# rsschool-cv
+[Aliaksei Khort - CV](https://lexkhortic.github.io/rsschool-cv/cv)
