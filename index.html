@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aliaksei Khort CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -25,7 +26,8 @@
 
             <div class="contacts-about-hobby">
                 <h4>ABOUT ME</h4>
-                I am honing the stack of technologies that I own, in the near future I plan to dive into Spring Security and RESTFull Web services. I work well both in a team and on my own. I lead an active lifestyle.
+                I am honing the stack of technologies that I own, in the near future I plan to dive into Spring Security
+                and RESTFull Web services. I work well both in a team and on my own. I lead an active lifestyle.
             </div>
 
             <div class="contacts-about-hobby">
@@ -66,31 +68,106 @@
         </section>
 
         <section class="right-section">
-            <div class="content-cv">
-                <section class="section-information">
-                    <h1>
-                        KHORT<br>
-                        ALIAKSEI
-                    </h1>
-                    <div style="font-weight: 500; font-size: 30px;">
-                        Junior Java Developer
-                    </div>
-                    <div style="margin: 8px 0;">
-                        25 years – 03.08.1997<br>
-                        Minsk, ready to move
-                    </div>
-                </section>
+            <section>
+                <h1>
+                    KHORT<br>
+                    ALIAKSEI
+                </h1>
+                <div style="font-weight: 500; font-size: 30px;">
+                    Junior Java Developer
+                </div>
+                <div style="margin: 10px 0;">
+                    25 years – 03.08.1997<br>
+                    Minsk, ready to move
+                </div>
+            </section>
 
-                <section class="section-information">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius accusantium eos expedita vel vitae sed minima provident est officia enim?
-                </section>
-            </div>
+            <section>
+                <h3>
+                    SKILLS
+                </h3>
+                <ul style="line-height: 1.5;">
+                    <li><i>Java: </i>java 8+, Spring, Spring boot, Thymeleaf, JSP, JDBC, JPA, Hibernate;</li>
+                    <li><i>Building tools:</i> Maven;</li>
+                    <li><i>Testing:</i> JUnit;</li>
+                    <li><i>VCS:</i> Git;</li>
+                    <li><i>DMS:</i> MySQL;</li>
+                    <li><i>Frontend:</i> HTML, CSS, JS;</li>
+                    <li><i>English:</i> Pre-Intermediate(reading and communication);</li>
+                    <li><i>Another skills:</i> SolidWorks, Autodesk Inventor, КОМПАС-3D, CAM, CAE;</li>
+                    <li>
+                        <i>Code examples(JAVA):</i>
+                        <pre>
+//display owner details after login
+@GetMapping("/company/{owner_id}/{pharm_id}")
+public String enteredInAccount(
+    Model model,
+    @PathVariable long owner_id,
+    @PathVariable long pharm_id) 
+{
+    Owner owner = ownerServices.findOwnerByID(owner_id);
+    List&lt;Pharmacy&gt; pharmacies = owner.getPharmaciesList();
+    model.addAttribute("ownerID", owner.getId());
+    model.addAttribute("company_name", owner.getNameCompany());
+    model.addAttribute("pharmacies", owner.getPharmaciesList()
+                        .stream()
+                        .sorted()
+                        .collect(Collectors.toList()));
+
+    if (pharmacies.isEmpty()) {
+        model.addAttribute("pharmacy", null);
+        model.addAttribute("medicines", null);
+    } else {
+        Pharmacy pharmacy = owner.getPharmaciesList()
+                        .stream()
+                        .filter(el -> el.getId() == pharm_id)
+                        .findFirst()
+                        .orElse(null);
+        model.addAttribute("pharmacy",  pharmacy);
+        assert pharmacy != null;
+        model.addAttribute("medicines", pharmacy.getMedicinesList()
+                        .stream()
+                        .sorted()
+                        .collect(Collectors.toList()));
+    }
+    return "owner";
+}</pre>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>
+                    EDUCATION
+                </h3>
+                <div>
+                    <div><b>Computer Academy "STEP"</b></div>
+                    <div class="date-occupation">
+                        <div>
+                            April 2022 - April 2023
+                        </div>
+                        <div>
+                            Junior Java Developer
+                        </div>
+                    </div>
+                    <div style="text-align: justify;">
+                        <i>Learned modules (368 academic hours):</i> JAVA Core, FRONT-END technologies, Theory of Database,
+                        JAVA technologies for WEB-Applications.
+                    </div>
+                </div>
+
+                <div style="margin-top: 15px;">
+                    <div><b>Sukhoi State Technical University of Gomel</b></div>
+                    <div class="date-occupation">
+                        <div>
+                            September 2014 - June 2019
+                        </div>
+                        <div style="text-align: right;">
+                            Automation engineer<br>in mechanical engineering
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -100,4 +177,5 @@
         </div>
     </footer>
 </body>
+
 </html>

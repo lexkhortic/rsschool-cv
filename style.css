@@ -11,8 +11,16 @@ body {
 
 h1 {
     margin: 0;
+    padding-top: 10px;
     font-weight: 500;
     font-size: 60px;
+}
+
+h3 {
+    margin: 0 0 5px 0;
+    padding: 0;
+    border: 0px solid rgb(88,138,183);
+    border-bottom-width: 1px;
 }
 
 h4 {
@@ -23,7 +31,6 @@ h4 {
 }
 
 header {
-    border: 1px solid black;
     text-align: center;
     width: 800px;
     box-sizing: border-box;
@@ -43,6 +50,12 @@ a {
 ul {
     margin: 0;
     padding-left: 25px;
+}
+
+pre {
+    margin: 5px 0;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 main {
@@ -67,7 +80,7 @@ footer {
     background-color: white;
     border-radius: 70px 0 0 0;
     margin-top: 35px;
-    padding: 15px 40px 10px 40px;
+    padding: 15px 0 10px 40px;
     width: 70%;
 }
 
@@ -84,6 +97,9 @@ footer {
     margin: 10px;
 }
 
-.section-information {
-    padding: 10px 0;
+.date-occupation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
