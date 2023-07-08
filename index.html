@@ -10,33 +10,35 @@
 <body>
     <header>
         <nav>
-            <a href="#about">ABOUT ME</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#contacts">CONTACTS</a>
-            <a href="#education">EDUCATION</a>
-            <a href="#experience">EXPERIENCE</a>
+            <ul class="link-nav">
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section class="left-section">
             <div class="avatar">
-                <img src="assets/img/my-photo-circle.png" alt="There should be your photo in a circle" width="200">
+                <img title="my photo" src="assets/img/my-photo-circle.png" alt="There should be your photo in a circle" width="200">
             </div>
 
             <div class="contacts-about-hobby">
-                <h4>ABOUT ME</h4>
+                <h4 id="about">ABOUT ME</h4>
                 I am honing the stack of technologies that I own, in the near future I plan to dive into Spring Security
                 and RESTFull Web services. I work well both in a team and on my own. I lead an active lifestyle.
             </div>
 
             <div class="contacts-about-hobby">
                 <h4>LINKS TO PET PROJECTS</h4>
-                <a href="https://github.com/lexkhortic/RecipeInYourPocket" target="_blank">Recipe In Your Pocket</a>
+                <a title="link to pet-project" href="https://github.com/lexkhortic/RecipeInYourPocket" target="_blank">Recipe In Your Pocket</a>
             </div>
 
             <div class="contacts-about-hobby">
-                <h4>CONTACTS</h4>
+                <h4 id="contacts">CONTACTS</h4>
                 <div style="margin-bottom: 8px;">
                     Phone & email:
                     <ul>
@@ -48,10 +50,10 @@
                 <div>
                     Social networks & messengers:
                     <ul>
-                        <li><a href="https://t.me/lexkhortic" target="_blank">Telegram</a></li>
-                        <li><a href="https://linkedin.com/in/lexkhortic" target="_blank">Linkedin</a></li>
-                        <li><a href="https://github.com/lexkhortic" target="_blank">Github</a></li>
-                        <li><a href="https://instagram.com/lex_khortic97" target="_blank">Instagram</a></li>
+                        <li><a title="Telegram" href="https://t.me/lexkhortic" target="_blank">Telegram</a></li>
+                        <li><a title="Linkedin" href="https://linkedin.com/in/lexkhortic" target="_blank">Linkedin</a></li>
+                        <li><a title="Github" href="https://github.com/lexkhortic" target="_blank">Github</a></li>
+                        <li><a title="Instagram" href="https://instagram.com/lex_khortic97" target="_blank">Instagram</a></li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +87,7 @@
             </section>
 
             <section>
-                <h3>
+                <h3 id="skills">
                     SKILLS
                 </h3>
                 <ul style="line-height: 1.5;">
@@ -139,7 +141,7 @@ public String enteredInAccount(
             </section>
 
             <section>
-                <h3>
+                <h3 id="education">
                     EDUCATION
                 </h3>
                 <div>
@@ -170,12 +172,83 @@ public String enteredInAccount(
                     </div>
                 </div>
             </section>
+
+            <section>
+                <h3 id="experience">
+                    EXPERIENCE
+                </h3>
+                <div>
+                    <div><b>Academic projects:</b></div>
+                    <div class="date-occupation">
+                        <ul style="text-align: justify;">
+                            <li>
+                                <i>Recipe In Your Pocket</i>  - a web-application for finding medicines in pharmacies in the city of Minsk has been implemented, with the ability to register your company and a network of pharmacies with medicines. <a href="https://github.com/lexkhortic/RecipeInYourPocket" target="_blank">[link to Github]</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 15px;">
+                        <div><b>LLC "Industrial engineering company"</b></div>
+                        <div class="date-occupation">
+                            <div>
+                                November 2021 - present
+                            </div>
+                            <div style="text-align: right;">
+                                Design engineer
+                            </div>
+                        </div>
+                        <div style="text-align: justify;">
+                            Responsibilities are related to the design, calculations of machines and mechanisms, maintaining and compiling design documentation.
+                        </div>
+                    </div>
+
+                    <div style="margin: 15px 0 10px 0;">
+                        <div><b>CJSC "Soligorsk Institute for Resource Saving Problems"</b></div>
+                        <div class="date-occupation">
+                            <div>
+                                July 2019 - November 2021
+                            </div>
+                            <div style="text-align: right;">
+                                Design engineer
+                            </div>
+                        </div>
+                        <div style="text-align: justify;">
+                            Responsibilities are related to the design, calculations of machines and mechanisms, maintaining and compiling design documentation.
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
     <footer>
-        <div>
-            footer
+        <div class="container-footer">
+            <div class="left-side-footer">
+                <a href="https://github.com/lexkhortic" target="_blank">
+                    <img style="border-radius: 50%" class="img-links" alt="" src="assets/img/github-color.svg">
+                </a>
+                <a href="@{https://www.linkedin.com/in/lexkhortic/}" target="_blank">
+                    <img style="border-radius: 5px" class="img-links" alt="" src="assets/img/linkedIn_color.svg">
+                </a>
+                <a href="@{https://t.me/lexkhortic}" target="_blank">
+                    <img style="border-radius: 50%" class="img-links" alt="" src="assets/img/telegram-logo.png">
+                </a>
+                <a href="@{https://www.instagram.com/lex_khortic97}" target="_blank">
+                    <img style="border-radius: 5px"class="img-links" alt="" src="assets/img/instagram-color.png">
+                </a>
+            </div>
+            <div class="center-footer">
+                <a href="https://rs.school/js/" target="_blank">
+                    <img title="Link to course" style="width: 50%; height: auto; " alt="logo RS school" src="assets/img/rs_school_js.svg">
+                </a>
+            </div>
+            <div class="right-side-footer">
+                © 2023 LLC «lexkhortic Lab»<br>
+                Republic of Belarus 220495<br>
+                Minsk, 12 St. Cats<br>
+                Help <span class="help">khort97@mail.ru</span><br>
+                Support <span class="help">+375(44)591-55-14</span>
+            </div>
         </div>
     </footer>
 </body>
